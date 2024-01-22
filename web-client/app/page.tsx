@@ -10,11 +10,33 @@ import Contact from './contact/contact';
 import { useEffect, useRef, useState } from 'react';
 import Navbar from './navbar/navbar';
 
+function useWindowDimensions() {
+  const [dimensions, setDimensions] = useState({
+    width: typeof window !== 'undefined' ? window.innerWidth : 0,
+    height: typeof window !== 'undefined' ? window.innerHeight : 0
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setDimensions({
+        width: window.innerWidth,
+        height: window.innerHeight
+      });
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  return dimensions;
+}
+
 export default function Home() {
-  const [viewportHeight, setViewportHeight] = useState(window.innerHeight);
-  const [pages, setPages] = useState(calculatePages(window.innerHeight,615));
 
-
+  const { width, height } = useWindowDimensions();
+  const [pages, setPages] = useState(calculatePages(height,615));
 
   function calculatePages(height:any,base:any) {
     const baseHeight = base; 
@@ -26,12 +48,12 @@ export default function Home() {
 
   const calculateOffset = (baseOffset:any,base:any) => {
     const baseHeight = base;
-    if (viewportHeight < baseHeight) {
-      return baseOffset * (baseHeight / viewportHeight);
+    if (height < baseHeight) {
+      return baseOffset * (baseHeight / height);
     }
     return baseOffset;
   };
-  if (window.innerWidth < 400) {
+  if (width< 400) {
 
     return (
       <>
@@ -67,7 +89,7 @@ export default function Home() {
         </Parallax>
       </>
     )
-  } if (window.innerWidth < 500) {
+  } if (width < 500) {
 
     return (
       <>
@@ -103,7 +125,7 @@ export default function Home() {
         </Parallax>
       </>
     )
-  }else if (window.innerWidth < 600) {
+  }else if (width < 600) {
 
     return (
       <>
@@ -139,7 +161,7 @@ export default function Home() {
         </Parallax>
       </>
     )
-    }else if (window.innerWidth < 700) {
+    }else if (width < 700) {
 
     return (
       <>
@@ -170,7 +192,7 @@ export default function Home() {
         </Parallax>
       </>
     )
-  }else if (window.innerWidth < 800) {
+  }else if (width < 800) {
     let off=0.65;
     if (window.innerHeight < 700) {
       off=0.65
@@ -208,7 +230,7 @@ export default function Home() {
       </>
     )
   }
-  else if (window.innerWidth < 1000) {
+  else if (width< 1000) {
     return (
       <>
 
@@ -236,7 +258,7 @@ export default function Home() {
       </>
     )
   }
-  else if (window.innerWidth < 1300) {
+  else if (width< 1300) {
     return (
       <>
 

@@ -9,7 +9,9 @@ COPY package*.json ./
 
 # Install all dependencies
 RUN npm install
-
+RUN npm install @react-spring/parallax
+RUN npm install next
+RUN npm i --save-dev @types/react-transition-group
 # Copy other source code files
 COPY . .
 
