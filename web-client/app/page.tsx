@@ -487,10 +487,10 @@ export default function Home() {
           <ParallaxLayer offset={0.999} speed={0.3} style={{ zIndex: 5 }} className={styles.aboutMe}>
             <AboutMe />
           </ParallaxLayer>
-          <ParallaxLayer offset={1.999} speed={0.5} style={{ zIndex: 6 }} >
+          <ParallaxLayer offset={2} speed={0.5} style={{ zIndex: 6 }} >
             <Project />
           </ParallaxLayer>
-          <ParallaxLayer offset={2.9} speed={0.3} style={{ zIndex: 6 }} >
+          <ParallaxLayer offset={2.999} speed={0.3} style={{ zIndex: 6 }} >
             <Contact />
           </ParallaxLayer>
         </Parallax>
