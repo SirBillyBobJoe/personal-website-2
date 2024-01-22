@@ -27,8 +27,8 @@ export default function AboutMe() {
             <h1  className={styles.h1}>About Me</h1>
             <img src="/HeadShot.png" className={styles.pfp} />
             <div className={styles.subHead}>
-                <img src="/whiteGithub.png" className={styles.social} />
-                <img src="/LinkedIn.png" className={styles.social} />
+                <img src="/whiteGithub.png" className={styles.social}  onClick={() => window.open('https://github.com/SirBillyBobJoe', '_blank')} />
+                <img src="/linkedin.png" className={styles.social}  onClick={() => window.open('https://www.linkedin.com/in/hosea-tong-ho-47b468252/', '_blank')} />
                 <Link className={styles.links} href={"/resume"} target="_blank">Résumé</Link>
                 <Link className={styles.links} href={"/transcript"}target="_blank">Transcript</Link>
 

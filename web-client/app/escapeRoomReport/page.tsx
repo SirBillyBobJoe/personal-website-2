@@ -15,7 +15,7 @@ export default function Resume() {
 
     return (
         <div className={styles.container1}>
-            <div className={styles.pdfContainer} onClick={downloadPdf}>
+            <div className={styles.pdfContainer}>
                 <Worker workerUrl="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js">
                     <Viewer fileUrl="TheSingularityEscapeRoomGameReport.pdf" />
                 </Worker>
