@@ -484,7 +484,7 @@ export default function Home() {
           <ParallaxLayer offset={0.999} speed={0.9} className={styles.secondPage} style={{ zIndex: 5 }}>
             <img src="/hiking.jpg" className={styles.secondPage} />
           </ParallaxLayer>
-          <ParallaxLayer offset={0.999} speed={0.3} style={{ zIndex: 5 }} className={styles.aboutMe}>
+          <ParallaxLayer offset={1} speed={0.3} style={{ zIndex: 5 }} className={styles.aboutMe}>
             <AboutMe />
           </ParallaxLayer>
           <ParallaxLayer offset={2} speed={0.5} style={{ zIndex: 6 }} >
