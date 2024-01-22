@@ -1,0 +1,203 @@
+
+
+.aboutMeContainer{
+    align-items: center;
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    
+}
+.h1 {
+    color: yellow;
+    font-size: 60px;
+    font-weight: 1000;
+    display: flex;
+    justify-content: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); 
+  }
+.pfp{
+    width:30%;
+    border-radius: 50%;
+}
+
+.subHead{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+
+.social {
+    border-radius: 50%;
+    width: 5%;
+    margin: 15px;
+    cursor: pointer;
+    transition: ease all 0.3s;
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.7); /* Shadow evenly around the shape */
+}
+
+.social:hover {
+    transform: scale(1.10);
+    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.9); /* Optional: Change shadow on hover */
+}
+
+.links{
+    margin-right: 10px;
+    transition:ease all 0.4s;
+    color: rgb(253, 190, 0);
+    text-decoration: none;
+}
+
+
+
+.links:hover{
+    color: rgb(253, 114, 0);
+    transform: scale(1.05);
+}
+
+.assetsContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;  
+}
+
+.assets{
+    margin-right: 20px;
+    cursor: pointer;
+    transition:ease all 0.2s;
+    text-decoration: none;
+}
+
+.assets:hover{
+    color: rgb(253, 114, 0);
+    transform: scale(1.05);
+}
+
+.assets::after{
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: rgb(253, 114, 0);
+    transition: width 0.3s;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+.assets:focus{
+    transform: scale(1.05);
+    color: rgb(253, 114, 0);
+    background-color: rgba(255, 255, 255, 0.1); 
+    outline: none;
+}
+.assets:hover::after, .assets:focus::after {
+    width: 100%; 
+}
+
+.assets:active {
+    font-weight: bold;
+}
+
+.assetsChosen{
+    margin-right: 20px;
+    cursor: pointer;
+    color:rgb(253, 173, 0);
+    text-decoration: underline;
+    transition: ease all 0.3s;
+}
+
+.assetsChosen:hover{
+    transform: scale(1.05);
+}
+
+.para{
+
+    width: 100%;
+    height: auto;
+}
+
+
+.fadeExit {
+    opacity: 1;
+    height: auto; /* Assuming the initial height is not fixed */
+}
+
+.fadeExitActive {
+    opacity: 0;
+    height: 0; /* Reduce the height to 0 */
+    transition: opacity 0ms, height 500ms ease-in; /* Adjust height transition duration as needed */
+    overflow: hidden; /* Prevent content from overflowing during transition */
+}
+
+
+/* Smoothly fade in the entering component */
+.fadeEnter {
+    opacity: 0;
+}
+
+.fadeEnterActive {
+    opacity: 1;
+    transition: opacity 1000ms ease-in; /* Smooth transition for entering */
+}
+
+@media (max-width: 1300px) {
+    .aboutMeContainer{
+        width: 80%;
+        
+    }
+    .h1 {
+        font-size: 40px;
+      }
+    .pfp{
+        width:20%;
+    }
+    .assets, .aboutMeContainer p,.para,.assetsChosen{
+        font-size: 15px;
+    }
+    
+    
+}
+@media (max-width: 800px) {
+
+    .h1 {
+        font-size: 20px;
+      }
+    .pfp{
+        width:15%;
+    }
+    .social{
+        width: 6%;
+    }
+    .links{
+        font-size: 12px;
+    }
+    .assets, .aboutMeContainer p,.para,.assetsChosen{
+        font-size: 11px;
+    }
+    
+    
+}
+
+@media (max-width: 400px) {
+
+    .h1 {
+        font-size: 25px;
+      }
+    .pfp{
+        width:20%;
+    }
+    .social{
+        width: 10%;
+    }
+    .links{
+        font-size: 15px;
+    }
+    .assets, .aboutMeContainer p,.para,.assetsChosen{
+        font-size: 10px;
+    }
+    
+    
+}

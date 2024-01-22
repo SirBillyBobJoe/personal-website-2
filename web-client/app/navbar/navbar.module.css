@@ -1,0 +1,42 @@
+.container{
+    height: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.home{
+    margin-left: 10px;
+    font-weight: 700;
+    color: white;
+    font-size: 30px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.home span{
+    color: rgb(250, 174, 75);
+}
+
+.buttons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    font-weight: 700;
+    color: white;
+    font-size: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.buttons p{
+    margin-right: 20px;
+}
+
+
+.navbar {
+    transition: top 0.3s ease-in-out;
+  }
+  
+  .hidden {
+    top: -100%; 
+  }
