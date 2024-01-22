@@ -473,7 +473,7 @@ export default function Home() {
     return (
       <>
 
-        <Parallax pages={4}>
+        <Parallax pages={5}>
 
           <ParallaxLayer offset={0} speed={0.8} style={{ zIndex: 3 }} >
             <img src="/firstPage.png" className={styles.firstPage} />
@@ -490,7 +490,7 @@ export default function Home() {
           <ParallaxLayer offset={2} speed={0.5} style={{ zIndex: 6 }} >
             <Project />
           </ParallaxLayer>
-          <ParallaxLayer offset={2.999} speed={0.3} style={{ zIndex: 6 }} >
+          <ParallaxLayer offset={3} speed={0.3} style={{ zIndex: 6 }} >
             <Contact />
           </ParallaxLayer>
         </Parallax>
