@@ -15,7 +15,7 @@ const projects = [
         reportLink: "/microscopeReport"
     },
     {
-        href: "https://github.com/SirBillyBobJoe/The-Singularity-Escape-Room-Game",
+        href: "https://github.com/SirBillyBobJoe/AI-Escape-Room",
         title: "The Singularity Escape Room Game",
         images: "/singularity.gif",
         reportLink: "/escapeRoomReport"
